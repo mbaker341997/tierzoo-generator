@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TierZoo StatBox Tool</title>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="./js/generate.js"></script>
+  </head>
+  <body>
+    <h1>TierZoo StatBox Tool</h1>
+    <p>For those who love Outside and want to generate statboxes for their favorite (or least favorite) builds. Unfortunately, because I don't have a server and I don't feel like using AWS I can't handle uploading an image for the build's image file.</p>
+    <p>NOTE: your browser needs to be able to run canvas for this to work!</p>
+    <div id="statBox">
+      <h2>Set Your Build's Stats</h2>
+      <p>INT: <input type="number" name="intNumber" id="intNumber" min="0" max="100" onchange="changeStat(this.name, this.value)">
+      PWR: <input type="number" name="pwrNumber" id="pwrNumber" min="0" max="100" onchange="changeStat(this.name, this.value)">
+      DEF: <input type="number" name="defNumber" id="defNumber" min="0" max="100" onchange="changeStat(this.name, this.value)"></p>
+      <p>MBL: <input type="number" name="mblNumber" id="mblNumber" min="0" max="100" onchange="changeStat(this.name, this.value)">
+      HP: <input type="number" name="hpNumber" id="hpNumber" min="0" max="100" onchange="changeStat(this.name, this.value)">
+      STL: <input type="number" name="stlNumber" id="stlNumber" min="0" max="100" onchange="changeStat(this.name, this.value)"></p>
+    </div>
+    <div id="imageView">
+      <h2>Your Build Image</h2>
+      <canvas id="preview" width="1451" height="808" style="border:1px solid #000000"></canvas>
+    </div>
+    <h2>Template</h2>
+    <img src="./assets/template.png" id="template" alt="template">
+  </body>
+</html>
