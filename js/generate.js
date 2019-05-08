@@ -36,6 +36,7 @@ var statXCoords = {
   stlNumber: 1291
 }
 
+// change stat values
 function changeStat(statID, amount) {
   if(amount < 0) {
     alert("Stat value cannot be negative")
@@ -56,4 +57,23 @@ function changeStat(statID, amount) {
     rectY = fullY + (fullHeight-rectHeight);//calculate y coordinate of top-left
     ctx.fillRect(statXCoords[statID],rectY,rectWidth,rectHeight);
   }
+}
+
+// change build Name
+function changeName() {
+  var name = document.getElementById("buildName").value;
+
+  var canvas = document.getElementById("preview");
+  var ctx = canvas.getContext("2d");
+
+  //reset Name
+  ctx.fillStyle = "#000000";
+  ctx.fillRect(0,0,canvas.width,100);// don't use fullHeight so that if a user sets a stat above 100 then that upper part gets taken away.
+
+  // write new name
+  ctx.fillStyle = "#FFFD15";
+  ctx.font = "35px runescape_uf";
+  ctx.textBaseline = "alphabetic";
+  ctx.textAlign = "center";
+  ctx.fillText(name, canvas.width/2, 77);
 }

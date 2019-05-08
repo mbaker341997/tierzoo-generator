@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'runescape_uf';
+    src: url('./assets/runescape_uf.woff') format('woff'),
+         url('./assets/runescape_uf.ttf') format('truetype');
+}
+
+.title {
+  font-family: "runescape_uf";
+}
